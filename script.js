@@ -7,4 +7,7 @@ function timeHandler() {
   let myHour = getTime.getHours() * 30;
   let myMin = getTime.getMinutes() * 6;
   let mySec = getTime.getSeconds() * 6;
+  second.style.transform = `rotate(${mySec}deg)`;
+  minute.style.transform = `rotate(${myMin}deg)`;
+  hour.style.transform = `rotate(${myHour + myMin / 12}deg)`;
 }
