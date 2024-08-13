@@ -1,0 +1,83 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(48, 48, 48);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.circle {
+  width: 400px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: url(images/analog-clock.png);
+  background-size: cover;
+  box-shadow: 0px 0px 30px -5px black inset;
+  position: relative;
+}
+.circle::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  border-radius: 50%;
+  background-color: rgb(190, 190, 190);
+  z-index: 5;
+}
+.hour-rotate {
+  width: 250px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  transform: rotate(0deg);
+}
+.hour-rotate::before {
+  content: "";
+  width: 10px;
+  height: 70px;
+  position: absolute;
+  top: 20%;
+  border-radius: 50px;
+  background-color: orange;
+}
+.minute-rotate {
+  width: 250px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  transform: rotate(0deg);
+}
+.minute-rotate::before {
+  content: "";
+  width: 6px;
+  height: 120px;
+  position: absolute;
+  top: 5%;
+  border-radius: 50px;
+  background-color: rgb(203, 37, 184);
+}
+.second-rotate {
+  width: 250px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  transform: rotate(0deg);
+}
+.second-rotate::before {
+  content: "";
+  width: 3px;
+  height: 190px;
+  position: absolute;
+  top: -10%;
+  border-radius: 50px;
+  background-color: rgb(37, 104, 198);
+}
